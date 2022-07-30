@@ -1,7 +1,7 @@
 # THE SHELL
 ### a Friendly Interactive SHell + Starship
 
-[visit Fish Shell Github](https://github.com/fish-shell/fish-shell)
+[visit Fish Shell Github](https://github.com/fish-shell/fish-shell)\
 [visit starship promtp](https://starship.rs/)
 
 
@@ -12,7 +12,7 @@ to list all your shells you can do `cat /etc/shells`
 ### Also I created a small fishfetch
 a neofetch style but smaller, easy customizable and much more faster  
 
-see it [here](/fishfetch/README.md)
+see it [here](fishfetch/README.md)
 
 ![Screenshot](fishfetch/screenshot.png)
 
@@ -31,7 +31,7 @@ see it [here](/fishfetch/README.md)
     ```
 
 ### fish configuration 
-####`~/.config/fish/config.fish`
+#### `~/.config/fish/config.fish`
 
 ```bash
 if status is-interactive
@@ -43,8 +43,8 @@ starhip init fish | source
 ```
 
 ## Starship
-its a super customizable prompt for the shell
-####`~/.config/starship.toml`
+its a super customizable prompt for the shell\
+#### `~/.config/starship.toml`
 
 ```bash
 add_newline = false

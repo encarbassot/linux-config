@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#chmod +x fishfetch
+#cp fishfetch.sh /usr/local/bin/fishfetch
+
 date="$(date +'%H:%M %d/%m/%y')"
 host="$(hostname)"
 uptime="$(uptime -p | sed 's/up //')"
@@ -12,12 +15,12 @@ batinfo="$(upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep "time to
 
 bright="$(cat /sys/class/backlight/intel_backlight/brightness)"
 brightMax="$(cat /sys/class/backlight/intel_backlight/max_brightness)"
-brightness=$((($bright*100)/3484))
+brightness=$((($bright*100)/19200)) #division by brightMax introduces an error
 
 outip="$(curl ifconfig.me -s)"
 inip="$(hostname -I)"
 
-mem="$(df /dev/sda5 -h | awk 'END{printf "[%s] %s/%s",$5,$3,$2}')" 
+#mem=""#"$(df /dev/sda5 -h | awk 'END{printf "[%s] %s/%s",$5,$3,$2}')" 
 
 
 #colors
@@ -40,7 +43,7 @@ fi
 
 #fonts
 lc="${reset}${bold}${yellow}"	#labels
-nc="${reset}${bold}${yellow}"	#user & hostname
+nc="${reset}${bold}${green}"	#user & hostname
 nb="${reset}${yellow}"		#labels non bold
 sp="${reset}${bold}${magenta}" 	#spacers
 ic="${reset}"			#info

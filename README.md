@@ -4,7 +4,7 @@
 ### a noob guide to make a power build
 I want to include here all my ubuntu configurations, probably i shall use some distro more Archy but i like ubuntu :3
 
-[console and tools](/fish)
+[console and tools](/fish)\
 [i3 window manager](/i3)
 
 ## COMPONENTS
@@ -19,6 +19,10 @@ I want to include here all my ubuntu configurations, probably i shall use some d
 
 
 ### TODO
+- i3config
+  - working lid
+  - change power button action
+  - advanced clipboard
 - make own keyboard layout
 - wallpaper with shortcuts
 	- markdown cheat sheet

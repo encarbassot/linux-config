@@ -67,3 +67,45 @@ or as i did, the last capture will be overwitten in `screenshots/last.png`an the
 bindsym Print --release exec import ~/Pictures/screenshots/last.png && cp ~/Pictures/screenshots/last.png ~Pictures/screenshots/capture_$(date '+%H_%M_%S-%d_%m_%y').png
 ```
 
+# power button
+first of all its need to disable the system default action,  
+located in `/etc/systemd/logind.conf`
+```bash
+#HandlePowerKey=poweroff
+HandlePowerKey=ignore
+```
+will be uncomented and set value to `ignore`
+
+then in the **i3 config** its posible to create a kinda power menu as we are used to
+
+![power menu](powerMenu.png)
+
+```bash
+set "$mode_power" [K]-lock, [L]-logout, [U]-suspend, [R]-reboot, [S]-shutdown
+mode "$mode_power" {
+    bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+    #bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym XF86PowerOff mode "default"
+}
+bindsym control+mod1+Delete mode "$mode_power"
+bindsym XF86PowerOff mode "$mode_power"
+```
+
+i used the fille [i3exit.sh](scripts/i3exit.sh) as a script to run all diferent commands, but it will be possible to run them directly form i3 config
+
+```bash
+bindsym k exec --no-startup-id i3lock -c 000000, mode "default"
+bindsym l exec --no-startup-id i3-msg exit logout, mode "default"
+bindsym u exec --no-startup-id sudo systemctl suspend, mode "default"
+#bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+bindsym r exec --no-startup-id sudo reboot, mode "default"
+bindsym s exec --no-startup-id sudo poweroff, mode "default"
+```
