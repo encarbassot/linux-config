@@ -14,7 +14,7 @@ a neofetch style but smaller, easy customizable and much more faster
 
 see it [here](fishfetch/README.md)
 
-![Screenshot](fishfetch/screenshot.png)
+![Screenshot](/img/screenshot.png)
 
 ## FISH
 1. install:

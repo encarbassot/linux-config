@@ -10,13 +10,13 @@ So I made my own with only the info that I want, and also is much more fast to l
 
 if you download it some commands may not work based on your distro, you may have to tweak the commands a bit. The commands had been made for **20.04.1-Ubuntu**
 
-![Screenshot](screenshot.png)
+![Screenshot](/img/screenshot.png)
 
 And because I'm using Fish as a shell, the ascii-art is a cute fish
 
 Also, there is an option for extended info
 
-![Screenshot-large](screenshot-large.png)
+![Screenshot-large](/img/screenshot-large.png)
 
 
 ## Configure

@@ -31,6 +31,11 @@ I want to include here all my ubuntu configurations, probably i shall use some d
   - calculator
   - include [power][powerGit] functionalities
   - i3bar scroll vloume controll
+  - firefox shortcuts
+  - display popup on volume up
+  - touchpad zoom
+  - BT mouse extra buttons
+  - browser and explorer for archies?
 
 
 #### personl programs

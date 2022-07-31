@@ -15,7 +15,7 @@ batinfo="$(upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep "time to
 
 bright="$(cat /sys/class/backlight/intel_backlight/brightness)"
 brightMax="$(cat /sys/class/backlight/intel_backlight/max_brightness)"
-brightness=$((($bright*100)/19200)) #division by brightMax introduces an error
+brightness=$((($bright*100)/$brightMax))
 
 outip="$(curl ifconfig.me -s)"
 inip="$(hostname -I)"
@@ -44,10 +44,10 @@ fi
 #fonts
 lc="${reset}${bold}${yellow}"	#labels
 nc="${reset}${bold}${green}"	#user & hostname
-nb="${reset}${yellow}"		#labels non bold
+nb="${reset}${yellow}"			#labels non bold
 sp="${reset}${bold}${magenta}" 	#spacers
-ic="${reset}"			#info
-c0="${reset}${yellow}"		#ascii-art
+ic="${reset}"					#info
+c0="${reset}${yellow}"			#ascii-art
 c1="${reset}${white}${bold}"	#ascii-art details
 
 #░░░░░░░░░░░░░░░░░
@@ -62,7 +62,7 @@ a="a"
 
 if [ -z "$1" ]; then #simpler
 cat <<EOF
-${c0}       _______     ${nc}  ${USER}${ic}@${nc}${nc}${host} ${ic}${date}${reset}
+${c0}       _______  ${nc}  ${USER}${ic}@${nc}${nc}${host} ${ic}${date}${reset}
 ${c0}     \-       -/   ${lc} VOLUME: ${ic}${volume}
 ${c0}  \_/           \  ${lc} BRIGHT: ${ic}[${brightness}%]${reset}
 ${c0}  |          ${c1}O O${c0} | ${lc}BATTERY: ${ic}[${battery}] ${batcol}${batstat}${ic} ${batinfo}${reset}
