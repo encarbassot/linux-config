@@ -11,6 +11,7 @@ then, logout, and in the login menu search for a little gear icon, to select i3
 - [Screenshots](#screenshots)
 - [Power Button](#power-button)
 - [Keyboard Layout](#keyboard-layout)
+- [Volume](#Volume)
 - [Brightness](#brightness)
 - [App to workspace](#app-to-workspace)
 
@@ -129,6 +130,39 @@ setxkbmap -optino caps:none
 setxkbmap -layout "dk,es" -option "grp:alt_shift_toggle"
 #change layout with alt + shift
 ```
+# Volume
+this already came configured on my installation, but i made a script to handle it better
+[scripts/volume.sh](scripts/volume.sh)
+
+```bash
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/CODE/linux-config/i3/scripts/volume.sh up && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/CODE/linux-config/i3/scripts/volume.sh down && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id  ~/CODE/linux-config/i3/scripts/volume.sh mute && $refresh_i3status
+```
+the script handle:
+- max volume on 300%
+- notifications with icons
+- **up down** or **mute** by param
+
+then it can be called also from the i3bar to use with scroll, like i used to do with [Volume2](https://github.com/irzyxa/Volume2) on windows
+
+```bash
+bar {
+    status_command i3status
+
+    #scroll up - volume up        
+    bindsym button4 exec --no-startup-id ~/CODE/linux-config/i3/scripts/volume.sh up && $refresh_i3status
+    #scroll down - volume down
+    bindsym button5 exec --no-startup-id ~/CODE/linux-config/i3/scripts/volume.sh down && $refresh_i3status
+}
+```
+also i added a line to controll spotify play/pause
+```bash
+bindsym XF86TouchpadToggle exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+```
+
 
 # Brightness
 after a while of try and error i came up with this solution
