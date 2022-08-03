@@ -12,6 +12,7 @@ then, logout, and in the login menu search for a little gear icon, to select i3
 - [Power Button](#power-button)
 - [Keyboard Layout](#keyboard-layout)
 - [Brightness](#brightness)
+- [App to workspace](#app-to-workspace)
 
 # Wallpaper
 - install FEH ```sudo apt install feh```
@@ -140,10 +141,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/brightne
 
 i created the [brightness.sh](scripts/brightness.sh) script to help me in this task
 
+for the moment it doesnt work if previously i do\
+`sudo chmod 777 /sys/class/backlight/intel_backlight/brightness`
 ```bash
 #!/bin/bash
-
-echo $1 >> ~/CODE/linux-config/i3/scripts/test.txt
 
 bright="$(cat /sys/class/backlight/intel_backlight/brightness)"
 brightMax="$(cat /sys/class/backlight/intel_backlight/max_brightness)"
@@ -165,3 +166,21 @@ percent="$(($next*100/$brightMax))"
 notify-send "brightness: $percent%"
 echo "$next" | tee /sys/class/backlight/intel_backlight/brightness
 ```
+# App to Workspace
+
+to make an specific app open directly to a specified workspace, first we must now the classname of the app
+
+by running `xprop` our cursor will change to a cross, then click on the app you want,
+
+on the console will apear some data, what you want its `WM_CLASS(STRING) =`
+
+or simply use `xprop | grep "WM_CLASS(STRING)`
+
+```bash
+for_window [class="Opera"] move container to workspace $ws2
+for_window [class="spotify"] move container to workspace $ws0
+for_window [class="code"] move container to workspace $ws3
+
+```
+
+

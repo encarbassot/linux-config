@@ -23,6 +23,9 @@ I want to include here all my ubuntu configurations, probably i shall use some d
   - working lid
   - change power button action
   - advanced clipboard
+  - i3bar scroll vloume controll
+  - touchpad zoom
+  - BT mouse extra buttons
 - make own keyboard layout
 - wallpaper with shortcuts
 	- markdown cheat sheet
@@ -30,12 +33,9 @@ I want to include here all my ubuntu configurations, probably i shall use some d
   - local searches
   - calculator
   - include [power][powerGit] functionalities
-  - i3bar scroll vloume controll
-  - firefox shortcuts
-  - display popup on volume up
-  - touchpad zoom
-  - BT mouse extra buttons
-  - browser and explorer for archies?
+- browser and explorer for archies?
+- firefox shortcuts
+- code python autoclicker
 
 
 #### personl programs
