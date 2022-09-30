@@ -7,6 +7,7 @@ I want to include here all my ubuntu configurations, probably i shall use some d
 ## COMPONENTS
  - [Console and tools](fish/README.md)
  - [i3 window manager](i3/README.md)
+ - [browser](browser/README.md)
 
 ## TODO
 - i3config
