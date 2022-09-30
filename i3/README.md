@@ -5,6 +5,9 @@ then, logout, and in the login menu search for a little gear icon, to select i3
 
 ![selectWM](/img/selectWM.png)
 
+usually the configuration is located on:
+>~/.config/i3/congig
+
 #### table of contents
 - [Wallpaper](#wallpaper)
 - [Touchpad](#touchpad)
@@ -30,7 +33,7 @@ then run `xinput list-props ID` or `xinput list-props 11` *in my case*
 
 ![xinput-list](/img/xinput-list.png)
 
-for example i want to enable **tap to click** so i have to run 
+for example i want to enable **tap to click** i have to run 
 `xinput set-prop 11 399 1`
 this will set the property **399** *Tapping* to **1** or *true*
 
@@ -206,7 +209,7 @@ to make an specific app open directly to a specified workspace, first we must no
 
 by running `xprop` our cursor will change to a cross, then click on the app you want,
 
-on the console will apear some data, what you want its `WM_CLASS(STRING) =`
+on the console will apear some data, what you want its `WM_CLASS(STRING) =
 
 or simply use `xprop | grep "WM_CLASS(STRING)`
 

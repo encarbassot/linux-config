@@ -29,6 +29,10 @@ see it [here](fishfetch/README.md)
     ```bash
     nano ~/.config/fish/functions/fish_greeting.fish
     ```
+    or
+    ``` nano ~/.config/fish/fish_variables```
+    and edit the line **fish_greeting** as follows
+    ```SETUPVAR fish_greeting:```
 
 ### fish configuration 
 #### `~/.config/fish/config.fish`

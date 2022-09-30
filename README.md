@@ -4,10 +4,36 @@
 ### a noob guide to make a power build
 I want to include here all my ubuntu configurations, probably i shall use some distro more Archy but i like ubuntu :3
 
-[console and tools](/fish)\
-[i3 window manager](/i3)
-
 ## COMPONENTS
+ - [Console and tools](fish/README.md)
+ - [i3 window manager](i3/README.md)
+
+## TODO
+- i3config
+  - [x] working lid
+  - [x] change power button action
+  - [ ] advanced clipboard
+    - [ ] multiple copies
+    - [ ] copy image when screenshot
+    - [ ] emoji board
+  - [X] i3bar scroll vloume controll
+  - [ ] touchpad zoom
+  - [ ] BT mouse extra buttons
+- [ ] make own keyboard layout
+- [ ] wallpaper with shortcuts
+	- markdown cheat sheet
+  - git cheat sheet
+- [ ] make my own Dmenu together with [power][powerGit]
+  - [ ] local searches
+  - [ ] calculator
+  - [ ] include [power][powerGit] functionalities
+- [ ] browser and explorer for archies?
+- [ ] code python autoclicker
+
+
+
+
+## 3rd party
 |what| why |
 | -|-|
 | [fish shell][fishGit] | more friendly shell
@@ -16,33 +42,12 @@ I want to include here all my ubuntu configurations, probably i shall use some d
 | [vsCode][vscodeGit] | this or vim, you choose...
 |[PhotoGimp][photogimpGit]| a Photoshop style for gimp
 |[ranger][rangerGit]|a file manager on console just for the looks
+| postman | 
+|
 
-
-### TODO
-- i3config
-  - working lid
-  - change power button action
-  - advanced clipboard
-  - i3bar scroll vloume controll
-  - touchpad zoom
-  - BT mouse extra buttons
-- make own keyboard layout
-- wallpaper with shortcuts
-	- markdown cheat sheet
-- make my own Dmenu together with [power][powerGit]
-  - local searches
-  - calculator
-  - include [power][powerGit] functionalities
-- browser and explorer for archies?
-- firefox shortcuts
-- code python autoclicker
-
-
-#### personl programs
-- postman
-
-
-
+### web development software
+ - postman - make custom GET,POST... requests
+ - [wappalyser](https://www.wappalyzer.com/) extension to analyze websites dependences
 
 
 
