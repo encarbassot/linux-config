@@ -43,8 +43,7 @@ I want to include here all my ubuntu configurations, probably i shall use some d
 | [vsCode][vscodeGit] | this or vim, you choose...
 |[PhotoGimp][photogimpGit]| a Photoshop style for gimp
 |[ranger][rangerGit]|a file manager on console just for the looks
-| postman | 
-|
+
 
 ### web development software
  - postman - make custom GET,POST... requests
