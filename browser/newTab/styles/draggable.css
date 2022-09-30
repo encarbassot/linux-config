@@ -1,0 +1,15 @@
+.draggableContainer{
+  position: absolute;
+
+}
+.draggable {
+    padding: 10px;
+    cursor: grab;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+}
+  
+.draggable:active{
+    cursor: grabbing;
+}

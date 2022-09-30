@@ -1,0 +1,22 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.separator{
+    font-size: 2vh;
+}
+
+#date #year         {font-size: 2vh;}
+#date #month        {font-size: 2vh;}
+#date #day          {font-size: 2vh;}
+#date #monthText    {font-size: 2vh; color: yellow;}
+#date #hours        {font-size: 2vh;}
+#date #minutes      {font-size: 2vh;}
+#date #seconds      {font-size: 1.7vh;}
+#date #millis       {font-size: 1vh;}
+#date #dayText      {font-size: 2vh; color: red;}

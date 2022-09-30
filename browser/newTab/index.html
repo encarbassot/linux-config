@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/draggable.js"></script>
+    <script src="scripts/hour.js"></script>
+    <script src="scripts/tittle.js"></script>
+    <script src="scripts/calculator.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/draggable.css">
+    <link rel="stylesheet" href="styles/hour.css">
+    <link rel="stylesheet" href="styles/calculator.css">
+    <style>
+        body{
+            background-color: #111;
+            color: whitesmoke;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a class="left" href="#about">X</a></li>
+        </ul>
+    </header>
+    <br>
+    <div>
+
+        <div id="calculatorContainer" class="draggableContainer">
+            <div class="draggable">Calculator</div>
+            <table id="calculator"></table>
+        </div>
+
+
+    </div>
+    <footer>
+        <div id="date">
+            <span id="year"></span>
+            <span class="separator">/</span>
+            <span id="month"></span>
+            <span class="separator">/</span>
+            <span id="day"></span>
+            <span class="separator">/</span>
+            <span id="monthText"></span>
+
+            <span id="hours"></span>
+            <span class="separator">:</span>
+            <span id="minutes"></span>
+            <span class="separator">:</span>
+            <span id="seconds"></span>
+            <span id="millis"></span>
+            <span id="dayText"></span>
+            <span id="timestamp"></span>
+
+        </div>
+    </footer>
+</body>
+
+</html>
