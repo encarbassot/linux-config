@@ -39,10 +39,12 @@ bindsym XF86MonBrightnessDown exec --no-startup-id ~/CODE/linux-config/i3/script
 
 # START A TERMINAL
 bindsym $mod+Return exec alacritty -o font.size=7
+bindsym mod1+Return exec alacritty -o font.size=7
 
 # kill focused window
 bindsym $mod+q kill
 bindsym $mod+BackSpace kill
+bindsym mod1+BackSpace kill
 
 # start dmenu (a program launcher)
 bindsym $mod+o exec --no-startup-id dmenu_run
@@ -119,6 +121,7 @@ bindsym $mod+Shift+Tab focus prev
 bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 bindsym $mod+space workspace back_and_forth
+bindsym mod1+space workspace back_and_forth
 
 
 # switch to workspace
